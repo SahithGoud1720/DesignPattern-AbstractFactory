@@ -7,15 +7,15 @@ public class Main
 {
     public static void main(String[] args)
     {
-        FactoryCreator factCreat = new FactoryCreator();
-        HerbivoreFactory herbiFact = factCreat.getHerbivoreFactory("Herbivore factory");
-        Herbivores friendly = herbiFact.getHerbivores("cow");
+        FactoryCreator factCreator = new FactoryCreator();
+        HerbivoreFactory herbivoreFactory = factCreator.getHerbivoreFactory("Herbivore factory");
+        Herbivores friendly = herbivoreFactory.getHerbivores("cow");
         friendly.AnimalCategory();
         friendly.AnimalInfo();
 
 
-        CarnivoreFactory carniFact = factCreat.getCarnivoreFactory("carnivore factory");
-        Carnivores danger = carniFact.getCarnivores("Jaguar");
+        CarnivoreFactory carnivoreFactory = factCreator.getCarnivoreFactory("carnivore factory");
+        Carnivores danger = carnivoreFactory.getCarnivores("Jaguar");
         danger.AnimalCategory();
         danger.AnimalInfo();
     }
